@@ -16,7 +16,7 @@
     
             $.each(data.properties, (k, v) => {
                 const d = v.description, t = v.type;
-                row += d.includes("DEPRECATED") || d.includes("removed") ? "<tr class='removed p-2'>" :"<tr class='p-2'>";
+                row += d.includes("DEPRECATED") || d.includes("removed") || k=="initialRepositoryEnablement" ? "<tr class='removed p-2'>" :"<tr class='p-2'>";
                 row += `<td>${k}</td><td>${d}</td><td>${t}</td></tr>`;
             })
     
