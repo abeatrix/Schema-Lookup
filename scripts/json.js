@@ -7,7 +7,7 @@ $(document).ready(()=>{
         $.each(data.properties, (k, v) => {
             const d = v.description, t = v.type, g = v.group;
             row += d.includes("DEPRECATED") ? "<tr class='removed'>" :"<tr>";
-            row += `<td>${key}</td><td>${d}</td><td>${t}</td><td>${g}</td></tr>`;
+            row += `<td>${k}</td><td>${d}</td><td>${t}</td><td>${g}</td></tr>`;
         })
 
         $("#site_config_1").append(row);
