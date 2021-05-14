@@ -6,11 +6,11 @@ $(document).ready(()=>{
 
         $.each(data.properties, (k, v) => {
             const d = v.description, t = v.type, g = v.group;
-            row += d.includes("DEPRECATED") ? "<tr class='removed p-2'>" :"<tr class='p-2'>";
-            row += `<td>${k}</td><td>${d}</td><td>${t}</td><td>${g}</td></tr>`;
+            row += d.includes("DEPRECATED") || d.includes("removed") ? "<tr class='removed p-2'>" :"<tr class='p-2'>";
+            row += `<td>${k}</td><td>${d}</td><td>${t}</td><td class="group">${g}</td></tr>`;
         })
 
-        $("#site_config_1").append(row);
+        $("#site-config-1").append(row);
 
     })
 })
