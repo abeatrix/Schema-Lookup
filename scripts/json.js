@@ -10,17 +10,13 @@ $(document).ready(()=>{
             row += `<td>${k}</td><td>${d}</td><td>${t}</td><td class="group">${g}</td></tr>`;
         })
 
-        $("#site-config-1").append(row);
-
-        let row2 = "";
-
         $.each(data.definitions, (k, v) => {
             const d = v.description, t = v.type;
-            row2 += d.includes("DEPRECATED") || d.includes("removed") ? "<tr class='removed p-2'>" :"<tr class='p-2'>";
-            row2 += `<td>${k}</td><td>${d}</td><td>${t}</td><td class="group">Definitions</td></tr>`;
+            row += d.includes("DEPRECATED") || d.includes("removed") ? "<tr class='removed p-2'>" :"<tr class='p-2'>";
+            row += `<td>${k}</td><td>${d}</td><td>${t}</td><td class="group">Definitions</td></tr>`;
         })
 
-        $("#site-config-2").append(row);
+        $("#site-config-1").append(row);
 
     })
 
