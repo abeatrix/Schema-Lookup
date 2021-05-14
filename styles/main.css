@@ -1,5 +1,15 @@
+h1 {
+    text-align: center;
+    color: #435c79;
+}
+
 tr {
     background-color: #e7f8fe;
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
 }
 
 .removed {
