@@ -11,8 +11,8 @@ $(document).ready(()=>{
         })
 
         $.each(data.definitions, (k, v) => {
-            const d = v.description || "more", t = v.type;
-            row += d.includes("DEPRECATED") || d.includes("removed") ? "<tr class='removed p-2'>" :"<tr class='p-2'>";
+            const d = v.description, t = v.type;
+            row += "<tr class='p-2'>";
             row += `<td>${k}</td><td>${d}</td><td>${t}</td><td class="group">Definitions</td></tr>`;
         })
 
@@ -21,4 +21,3 @@ $(document).ready(()=>{
     })
 
 })
-
